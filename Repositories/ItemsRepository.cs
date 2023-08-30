@@ -1,10 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using Play.Catalog.Service.Dtos;
 using Play.Catalog.Service.Entities;
 
 namespace Play.Catalog.Service.Repositories
 {
 
-    public class ItemsRepository
+    public class ItemsRepository : IItemsRepository
     {
         private const string collectionName = "items";
 
@@ -61,8 +63,6 @@ namespace Play.Catalog.Service.Repositories
 
             await dbCollection.DeleteOneAsync(filter);
         }
-
-
     }
 
 }
