@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\user\\projects\\Play.Common\\src\\Play.Common": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,9 +45,9 @@
               "target": "Package",
               "version": "[7.0.3, )"
             },
-            "MongoDB.Driver": {
+            "Play.Common": {
               "target": "Package",
-              "version": "[2.21.0, )"
+              "version": "[1.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

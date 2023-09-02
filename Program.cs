@@ -1,6 +1,7 @@
 using Play.Catalog.Service;
 using Play.Catalog.Service.Entities;
-using Play.Catalog.Service.Settings;
+using Play.Common.MongoDB;
+using Play.Common.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
