@@ -1,5 +1,7 @@
 using System.ComponentModel;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
+using Play.Catalog.Contracts;
 using Play.Catalog.Service.Dtos;
 using Play.Catalog.Service.Entities;
 using Play.Common;
@@ -15,19 +17,25 @@ namespace Play.Catalog.Service.Controllers
 
         private readonly IRepository<Item> itemsRepository;
 
-        public ItemsController(IRepository<Item> _itemsRepository)
+        private readonly IPublishEndpoint publishEndpoint;
+
+        public ItemsController(IRepository<Item> _itemsRepository, IPublishEndpoint _publishEndpoint)
         {
             itemsRepository = _itemsRepository;
+            publishEndpoint = _publishEndpoint;
         }
 
 
         [HttpGet]
-        public async Task<IEnumerable<ItemDto>> GetAsync()
+        public async Task<ActionResult<IEnumerable<ItemDto>>> GetAsync()
         {
+
+
             var items = (await itemsRepository.GetAllAsync())
             .Select(item => item.AsDto());
 
-            return items;
+
+            return Ok(items);
         }
 
 
@@ -61,6 +69,7 @@ namespace Play.Catalog.Service.Controllers
 
             await itemsRepository.CreateAsync(item);
 
+            await publishEndpoint.Publish(new CatalogItemCreated(item.Id, item.Name, item.Description));
 
             return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id }, item);
         }
@@ -70,13 +79,10 @@ namespace Play.Catalog.Service.Controllers
         {
             var item = await itemsRepository.GetAsync(id);
 
-
-
             if (item == null)
             {
                 return NotFound();
             }
-
 
             var updatedItem = new Item
             {
@@ -87,6 +93,7 @@ namespace Play.Catalog.Service.Controllers
 
             await itemsRepository.UpdateAsync(updatedItem);
 
+            await publishEndpoint.Publish(new CatalogItemUpdated(updatedItem.Id, updatedItem.Name, updatedItem.Description));
 
             return NoContent();
 
@@ -103,8 +110,8 @@ namespace Play.Catalog.Service.Controllers
                 return NotFound();
             }
 
-
             await itemsRepository.RemoveAsync(id);
+            await publishEndpoint.Publish(new CatalogItemDeleted(id));
 
             return NoContent();
         }
