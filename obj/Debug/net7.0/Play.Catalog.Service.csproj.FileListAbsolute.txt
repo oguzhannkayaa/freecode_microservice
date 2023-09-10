@@ -49,11 +49,11 @@ C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\ru
 C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Microsoft.Extensions.Http.Polly.dll
 C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Polly.dll
 C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Polly.Extensions.Http.dll
-C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\MassTransit.Abstractions.dll
-C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
-C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
-C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\System.Text.Json.dll
 C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Play.Catalog.Contracts.dll
 C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Play.Catalog.Contracts.pdb
+C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Automatonymous.dll
+C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\GreenPipes.dll
+C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\NewId.dll
+C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\user\projects\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
